@@ -1,0 +1,45 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "email": "user@test.com",
+            "password": "123",
+            "role": "user"
+        },
+        {
+            "id": "2",
+            "email": "admin@test.com",
+            "password": "123",
+            "role": "admin"
+        }
+    ],
+    "slots": [
+        {
+            "id": "1",
+            "doctor": "Dr. Gregory House",
+            "specialty": "Diagnóstico",
+            "date": "2023-10-25",
+            "time": "10:00",
+            "status": "available",
+            "patientId": null
+        },
+        {
+            "id": "2",
+            "doctor": "Dr. Meredith Grey",
+            "specialty": "Cirugía",
+            "date": "2023-10-25",
+            "time": "11:00",
+            "status": "available",
+            "patientId": null
+        },
+        {
+            "id": "3",
+            "doctor": "Dr. Derek Shepherd",
+            "specialty": "Neurología",
+            "date": "2023-10-26",
+            "time": "09:00",
+            "status": "booked",
+            "patientId": "1"
+        }
+    ]
+}
