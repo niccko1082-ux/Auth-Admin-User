@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "email": "user@test.com",
+            "password": "123",
+            "role": "user"
+        },
+        {
+            "id": "2",
+            "email": "admin@test.com",
+            "password": "123",
+            "role": "admin"
+        }
+    ],
+    "questions": [
+        {
+            "id": "1",
+            "text": "¿Cuál es la capital de Francia?",
+            "options": [
+                "Madrid",
+                "Londres",
+                "París",
+                "Berlín"
+            ],
+            "correctIndex": 2
+        },
+        {
+            "id": "2",
+            "text": "¿Cuánto es 2 + 2?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "22"
+            ],
+            "correctIndex": 1
+        },
+        {
+            "id": "3",
+            "text": "¿Qué lenguaje se usa para estilos web?",
+            "options": [
+                "Java",
+                "HTML",
+                "CSS",
+                "Python"
+            ],
+            "correctIndex": 2
+        }
+    ],
+    "results": []
+}

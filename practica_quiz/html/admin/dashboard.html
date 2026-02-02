@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Quiz Master</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { protectRoute } from '../../js/guard.js';
+        protectRoute('admin');
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-gray-800 text-white p-4 flex justify-between items-center shadow-md">
+        <h1 class="font-bold text-xl flex items-center gap-2">
+            <span>⚙️</span> Admin Quiz
+        </h1>
+        <div class="flex items-center gap-4">
+            <span id="user-email" class="text-sm font-medium"></span>
+            <button id="logoutBtn"
+                class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm transition">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6 flex flex-col lg:flex-row gap-8">
+
+        <!-- Add Question Form -->
+        <div class="lg:w-1/3">
+            <div class="bg-white p-6 rounded-lg shadow-md sticky top-6">
+                <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-2">Nueva Pregunta</h2>
+                <form id="addQuestionForm" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-1">Pregunta</label>
+                        <input type="text" id="qText" class="w-full border rounded px-3 py-2" required>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-gray-700 text-sm font-bold">Opciones</label>
+                        <input type="text" id="opt0" class="w-full border rounded px-3 py-1 text-sm"
+                            placeholder="Opción 1" required>
+                        <input type="text" id="opt1" class="w-full border rounded px-3 py-1 text-sm"
+                            placeholder="Opción 2" required>
+                        <input type="text" id="opt2" class="w-full border rounded px-3 py-1 text-sm"
+                            placeholder="Opción 3" required>
+                        <input type="text" id="opt3" class="w-full border rounded px-3 py-1 text-sm"
+                            placeholder="Opción 4" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-1">Respuesta Correcta (0-3)</label>
+                        <input type="number" id="correctIdx" min="0" max="3" class="w-full border rounded px-3 py-2"
+                            required>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded font-bold transition shadow">
+                        Guardar Pregunta
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="lg:w-2/3">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-4 border-b bg-gray-50 flex justify-between items-center">
+                    <h2 class="text-xl font-bold text-gray-800">Leaderboard</h2>
+                    <span class="text-xs text-gray-500">Resultados recientes</span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-purple-100 border-b text-purple-800 uppercase text-xs">
+                            <tr>
+                                <th class="p-4">Estudiante ID</th>
+                                <th class="p-4 text-center">Puntaje</th>
+                                <th class="p-4 text-center">Total Preguntas</th>
+                                <th class="p-4 text-right">Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardList">
+                            <!-- Rows Render Here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="module" src="../../js/admin/dashboard.js"></script>
+</body>
+
+</html>

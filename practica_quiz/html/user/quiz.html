@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen - Quiz Master</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { protectRoute } from '../../js/guard.js';
+        protectRoute('user');
+    </script>
+</head>
+
+<body class="bg-purple-50 min-h-screen flex flex-col">
+
+    <nav class="bg-purple-700 text-white p-4 flex justify-between items-center shadow-md">
+        <h1 class="font-bold text-xl flex items-center gap-2">
+            <span>🎓</span> Quiz Master
+        </h1>
+        <div class="flex items-center gap-4">
+            <span id="user-email" class="text-sm font-medium"></span>
+            <button id="logoutBtn"
+                class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm transition">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6 flex-1 flex items-center justify-center">
+
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl text-center" id="quizContainer">
+
+            <!-- Loading -->
+            <div id="loading" class="text-gray-500">Cargando preguntas...</div>
+
+            <!-- Question Screen -->
+            <div id="questionScreen" class="hidden">
+                <div class="mb-4 flex justify-between text-sm text-gray-500 font-bold uppercase">
+                    <span id="progressText">Pregunta 1 de 5</span>
+                    <span>Puntos: <span id="currentScore">0</span></span>
+                </div>
+
+                <h2 class="text-2xl font-bold text-gray-800 mb-6" id="questionText">¿Pregunta?</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="optionsContainer">
+                    <!-- Options buttons -->
+                </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div id="resultScreen" class="hidden space-y-6">
+                <h2 class="text-3xl font-bold text-gray-800">¡Examen Terminado!</h2>
+                <div class="text-6xl" id="resultIcon">🎉</div>
+                <p class="text-xl text-gray-600">Tu puntuación final es:</p>
+                <div class="text-5xl font-bold text-purple-600" id="finalScore">0/0</div>
+
+                <button onclick="location.reload()"
+                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded font-bold transition">
+                    Intentar de Nuevo
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="../../js/user/quiz.js"></script>
+</body>
+
+</html>
