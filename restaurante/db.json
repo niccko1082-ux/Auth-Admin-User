@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "08c8",
+      "email": "Carlos12@gmail.com",
+      "password": "0000",
+      "rol": "User"
+    },
+    {
+      "id": "b01a",
+      "email": "Admin@gmail.com",
+      "password": "0000",
+      "rol": "Admin"
+    }
+  ],
+
+  "records":[
+    
+  ]
+}
