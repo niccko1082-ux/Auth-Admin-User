@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Inventario</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { protectRoute } from '../../js/guard.js';
+        protectRoute('admin');
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-gray-800 text-white p-4 flex justify-between items-center shadow-md">
+        <h1 class="font-bold text-xl flex items-center gap-2">
+            <span>📦</span> Admin Inventario
+        </h1>
+        <div class="flex items-center gap-4">
+            <span id="user-email" class="text-sm font-medium"></span>
+            <button id="logoutBtn"
+                class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm transition">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6 flex flex-col gap-8">
+
+        <!-- Inventory Table -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4 border-b bg-gray-50 flex justify-between items-center">
+                <h2 class="text-xl font-bold text-gray-800">Control de Stock</h2>
+                <span id="totalProducts"
+                    class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">0 Productos</span>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-200 border-b text-gray-700 uppercase text-xs">
+                        <tr>
+                            <th class="p-4">Producto</th>
+                            <th class="p-4 text-right">Precio</th>
+                            <th class="p-4 text-center">Stock Actual</th>
+                            <th class="p-4 text-center">Reabastecer</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryList">
+                        <!-- Inventory Rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sales Report -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4 border-b bg-gray-50">
+                <h2 class="text-xl font-bold text-gray-800">Registro de Ventas</h2>
+            </div>
+            <div class="p-4">
+                <ul id="salesList" class="divide-y divide-gray-100 max-h-64 overflow-y-auto">
+                    <!-- Sales Rows -->
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="module" src="../../js/admin/inventory.js"></script>
+</body>
+
+</html>

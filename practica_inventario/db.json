@@ -1,0 +1,40 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "email": "user@test.com",
+            "password": "123",
+            "role": "user"
+        },
+        {
+            "id": "2",
+            "email": "admin@test.com",
+            "password": "123",
+            "role": "admin"
+        }
+    ],
+    "products": [
+        {
+            "id": "1",
+            "name": "Laptop Gamer",
+            "price": 1200,
+            "stock": 5,
+            "image": "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SL1500_.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Mouse Inalámbrico",
+            "price": 25,
+            "stock": 20,
+            "image": "https://m.media-amazon.com/images/I/61lCLRk9n4L._AC_SL1500_.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Teclado Mecánico",
+            "price": 80,
+            "stock": 0,
+            "image": "https://m.media-amazon.com/images/I/71fC9aD2+pL._AC_SL1500_.jpg"
+        }
+    ],
+    "sales": []
+}
