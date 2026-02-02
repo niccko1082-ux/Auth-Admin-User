@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "email": "user@test.com",
+            "password": "123",
+            "role": "user"
+        },
+        {
+            "id": "2",
+            "email": "admin@test.com",
+            "password": "123",
+            "role": "admin"
+        }
+    ],
+    "transactions": [
+        {
+            "id": "1",
+            "userId": "1",
+            "type": "income",
+            "amount": 5000,
+            "category": "Salario",
+            "date": "2023-10-01"
+        },
+        {
+            "id": "2",
+            "userId": "1",
+            "type": "expense",
+            "amount": 1500,
+            "category": "Alquiler",
+            "date": "2023-10-05"
+        }
+    ]
+}
