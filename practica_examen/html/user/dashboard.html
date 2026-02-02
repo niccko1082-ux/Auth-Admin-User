@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { protectRoute } from '../../js/guard.js';
+        protectRoute('user');
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-blue-600 text-white p-4 flex justify-between items-center shadow">
+        <h1 class="font-bold text-xl">My Tasks</h1>
+        <div class="flex items-center gap-4">
+            <span id="user-email" class="text-sm"></span>
+            <button id="logoutBtn" class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6 max-w-2xl">
+
+        <!-- Add Task Form -->
+        <div class="bg-white p-4 rounded shadow mb-6">
+            <h2 class="font-bold mb-2 text-gray-700">New Task</h2>
+            <form id="addTaskForm" class="flex gap-2">
+                <input type="text" id="taskTitle" class="flex-1 border rounded px-3 py-2"
+                    placeholder="What needs to be done?" required>
+                <button type="submit"
+                    class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 font-bold">+</button>
+            </form>
+        </div>
+
+        <!-- Task List -->
+        <div class="bg-white rounded shadow p-4">
+            <h2 class="font-bold mb-4 text-gray-700">To-Do List</h2>
+            <ul id="taskList" class="space-y-2">
+                <!-- Tasks will appear here -->
+            </ul>
+        </div>
+    </main>
+
+    <script type="module" src="../../js/user/dashboard.js"></script>
+</body>
+
+</html>
