@@ -1,0 +1,42 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "email": "user@test.com",
+            "password": "123",
+            "role": "user"
+        },
+        {
+            "id": "2",
+            "email": "admin@test.com",
+            "password": "123",
+            "role": "admin"
+        }
+    ],
+    "books": [
+        {
+            "id": "1",
+            "title": "El Señor de los Anillos",
+            "author": "J.R.R. Tolkien",
+            "status": "available",
+            "reservedBy": null,
+            "image": "https://upload.wikimedia.org/wikipedia/en/e/e9/First_Single_Volume_Edition_ofThe_Lord_of_the_Rings.gif"
+        },
+        {
+            "id": "2",
+            "title": "Cien Años de Soledad",
+            "author": "Gabriel García Márquez",
+            "status": "available",
+            "reservedBy": null,
+            "image": "https://images.penguinrandomhouse.com/cover/9780307474728"
+        },
+        {
+            "id": "3",
+            "title": "1984",
+            "author": "George Orwell",
+            "status": "reserved",
+            "reservedBy": "1",
+            "image": "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg"
+        }
+    ]
+}

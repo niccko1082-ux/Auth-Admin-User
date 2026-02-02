@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Biblioteca</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { protectRoute } from '../../js/guard.js';
+        protectRoute('user');
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-indigo-700 text-white p-4 flex justify-between items-center shadow-md sticky top-0 z-10">
+        <h1 class="font-bold text-xl flex items-center gap-2">
+            <span>📚</span> Biblioteca
+        </h1>
+        <div class="flex items-center gap-4">
+            <span id="user-email" class="text-sm font-medium"></span>
+            <button id="logoutBtn"
+                class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm transition">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">Catálogo de Libros</h2>
+
+        <div id="bookList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Books will load here -->
+        </div>
+
+        <!-- My Reservations Section -->
+        <h2 class="text-2xl font-bold mt-12 mb-6 text-gray-800 border-b pb-2">Mis Reservas</h2>
+        <div id="myReservations" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Reserved books logic here -->
+            <p class="text-gray-500 italic col-span-full">No tienes reservas activas.</p>
+        </div>
+    </main>
+
+    <script type="module" src="../../js/user/catalog.js"></script>
+</body>
+
+</html>
