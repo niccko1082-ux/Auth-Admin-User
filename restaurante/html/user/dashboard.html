@@ -2,21 +2,69 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User</title>
-    <script src="../../js/guards/authGuard.js"></script>
-    <script>
+    <title>User Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { protectRoute } from '../../js/guards/authGuard.js';
         protectRoute('User');
     </script>
-
 </head>
 
-<body>
+<body class="bg-gray-100 min-h-screen">
 
-    <button id="logOut"> Log out</button>
-    <H1>User Dashboard</H1>
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md flex justify-between items-center sticky top-0 z-10">
+        <h1 class="text-xl font-bold">Restaurante App</h1>
+        <div class="flex gap-4 items-center">
+            <span class="font-medium" id="user-email">User</span>
+            <button id="logOut" class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded">Log out</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6 flex flex-col md:flex-row gap-6">
+
+        <!-- Products Column -->
+        <div class="w-full md:w-2/3">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Menú</h2>
+            <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Productos cargados dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Invoice/Cart Column -->
+        <div class="w-full md:w-1/3">
+            <div class="bg-white p-6 rounded-lg shadow-md sticky top-24">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Tu Factura</h2>
+
+                <!-- Cart Items List -->
+                <div id="cart-items" class="space-y-3 mb-6 max-h-96 overflow-y-auto">
+                    <p class="text-gray-500 text-center py-4">El carrito está vacío</p>
+                </div>
+
+                <!-- Totals -->
+                <div class="border-t pt-4 space-y-2">
+                    <div class="flex justify-between items-center text-gray-600">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xl font-bold text-gray-800">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                </div>
+
+                <button id="checkout-btn"
+                    class="w-full mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg transition shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed">
+                    Confirmar Pedido
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="module" src="../../js/user/dashboard.js"></script>
 </body>
 
 </html>

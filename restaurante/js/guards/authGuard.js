@@ -1,4 +1,4 @@
-function protectRoute(allowedRole) {
+export function protectRoute(allowedRole) {
   const session = localStorage.getItem('session');
 
   if (!session) {

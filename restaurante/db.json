@@ -13,8 +13,56 @@
       "rol": "Admin"
     }
   ],
-
-  "records":[
-    
+  "products": [
+    {
+      "id": "1",
+      "nombre": "Hamburguesa Clásica",
+      "precio": 5.99,
+      "imagen": "https://offloadmedia.feverup.com/madridsecreto.co/wp-content/uploads/2021/05/04050015/goiko-hamburguesa-1024x597.jpg"
+    },
+    {
+      "id": "2",
+      "nombre": "Papas Fritas",
+      "precio": 2.5,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2023/01/patatas-fritas-crujientes-francesa.jpg"
+    },
+    {
+      "id": "3",
+      "nombre": "Refresco",
+      "precio": 1.5,
+      "imagen": "https://img.freepik.com/foto-gratis/refresco-cola-vaso_1203-2795.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "id": "7131",
+      "userId": "08c8",
+      "userEmail": "Carlos12@gmail.com",
+      "items": [
+        {
+          "id": "1",
+          "nombre": "Hamburguesa Clásica",
+          "precio": 5.99
+        },
+        {
+          "id": "1",
+          "nombre": "Hamburguesa Clásica",
+          "precio": 5.99
+        },
+        {
+          "id": "2",
+          "nombre": "Papas Fritas",
+          "precio": 2.5
+        },
+        {
+          "id": "3",
+          "nombre": "Refresco",
+          "precio": 1.5
+        }
+      ],
+      "total": 15.98,
+      "status": "pending",
+      "date": "2026-02-02T05:40:57.883Z"
+    }
   ]
 }
