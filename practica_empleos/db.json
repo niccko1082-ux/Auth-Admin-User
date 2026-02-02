@@ -1,0 +1,42 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "email": "user@test.com",
+            "password": "123",
+            "role": "user",
+            "name": "Juan Pérez"
+        },
+        {
+            "id": "2",
+            "email": "admin@test.com",
+            "password": "123",
+            "role": "admin",
+            "name": "Recruiter Admin"
+        }
+    ],
+    "jobs": [
+        {
+            "id": "1",
+            "title": "Frontend Developer",
+            "company": "Tech Solutions",
+            "salary": 2500,
+            "description": "Buscamos experto en React y Tailwind."
+        },
+        {
+            "id": "2",
+            "title": "Backend Developer",
+            "company": "DataCorp",
+            "salary": 3000,
+            "description": "Experiencia con Node.js y SQL."
+        },
+        {
+            "id": "3",
+            "title": "Diseñador UI/UX",
+            "company": "Creative Studio",
+            "salary": 2000,
+            "description": "Uso avanzado de Figma."
+        }
+    ],
+    "applications": []
+}
