@@ -1,0 +1,46 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "email": "user@test.com",
+            "password": "123",
+            "name": "Juan Pérez"
+        },
+        {
+            "id": "2",
+            "email": "admin@test.com",
+            "password": "123",
+            "name": "Ana Admin"
+        },
+        {
+            "id": "3",
+            "email": "carlos@test.com",
+            "password": "123",
+            "name": "Carlos Dev"
+        }
+    ],
+    "posts": [
+        {
+            "id": "1",
+            "userId": "2",
+            "content": "¡Bienvenidos a la nueva red social interna! 🚀",
+            "likes": 5,
+            "date": "2024-02-01"
+        },
+        {
+            "id": "2",
+            "userId": "3",
+            "content": "¿Alguien sabe cómo centrar un div? 😅",
+            "likes": 2,
+            "date": "2024-02-02"
+        }
+    ],
+    "comments": [
+        {
+            "id": "1",
+            "postId": "2",
+            "userId": "1",
+            "text": "Usando flexbox o grid es muy fácil."
+        }
+    ]
+}

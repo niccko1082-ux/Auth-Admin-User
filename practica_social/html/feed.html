@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { protectRoute } from '../js/guard.js';
+        protectRoute();
+    </script>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+
+    <nav class="bg-pink-600 text-white p-4 flex justify-between items-center shadow-md sticky top-0 z-10 w-full">
+        <h1 class="font-bold text-xl flex items-center gap-2">
+            <span>📷</span> InstaDev
+        </h1>
+        <div class="flex items-center gap-4">
+            <span id="user-name" class="text-sm font-medium"></span>
+            <button id="logoutBtn"
+                class="bg-pink-700 hover:bg-pink-800 px-3 py-1 rounded text-sm transition">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 max-w-2xl">
+
+        <!-- Create Post -->
+        <div class="bg-white p-4 rounded-lg shadow mb-6">
+            <h2 class="text-lg font-bold mb-2 text-gray-700">Crear Publicación</h2>
+            <form id="createPostForm" class="flex gap-2">
+                <input type="text" id="postContent" class="flex-1 border rounded px-3 py-2"
+                    placeholder="¿Qué estás pensando?" required>
+                <button type="submit"
+                    class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded font-bold transition">
+                    Publicar
+                </button>
+            </form>
+        </div>
+
+        <!-- Feed -->
+        <div id="feed" class="space-y-6">
+            <!-- Posts render here -->
+        </div>
+
+    </main>
+
+    <script type="module" src="../js/feed.js"></script>
+</body>
+
+</html>
